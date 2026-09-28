@@ -1,0 +1,9 @@
+{
+  "name": "Malik Cattle & Farmhouse",
+  "short_name": "Malik Farmhouse",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F3EBDD",
+  "theme_color": "#263F2F",
+  "icons": []
+}

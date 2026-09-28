@@ -11,7 +11,7 @@
   style.textContent = `
     .brand__mark,.source-card__logo{background:#F3EBDD!important}
     .brand__mark{width:54px!important;height:54px!important;border-radius:12px!important;padding:2px!important}
-    .brand__mark img,.source-card__logo img{object-fit:contain!important;background:#F3EBDD!important;width:100%!important;height:100%!important}
+    .brand__mark img,.source-card__logo img{object-fit:contain!important;background:#F3EBDD!important;width:100%!important;height:100%!important;display:block!important}
     .source-card__logo{width:58px!important;height:58px!important;border-radius:14px!important;padding:2px!important}
     .mobile-menu[hidden]{display:none!important}
     @media(max-width:900px){
@@ -33,9 +33,9 @@
   `;
   document.head.appendChild(style);
 
-  // Keep the user-supplied official logo local and stable. Do not overwrite it with Facebook/Graph URLs.
+  // Always use the user-supplied official logo from the local JPG asset.
   document.querySelectorAll('.brand__mark img, .source-card__logo img').forEach((img) => {
-    img.src = 'assets/images/official-logo.webp?v=3';
+    img.src = 'assets/images/official-logo.jpg?v=1';
     img.alt = 'Malik Cattle & Farmhouse official logo';
     img.removeAttribute('referrerpolicy');
     img.removeAttribute('onerror');

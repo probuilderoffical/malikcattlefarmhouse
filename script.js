@@ -33,10 +33,13 @@
   `;
   document.head.appendChild(style);
 
+  // Keep the user-supplied official logo local and stable. Do not overwrite it with Facebook/Graph URLs.
   document.querySelectorAll('.brand__mark img, .source-card__logo img').forEach((img) => {
-    img.src = 'https://graph.facebook.com/61581354515088/picture?width=1024&height=1024';
+    img.src = 'assets/images/official-logo.webp?v=3';
     img.alt = 'Malik Cattle & Farmhouse official logo';
     img.removeAttribute('referrerpolicy');
+    img.removeAttribute('onerror');
+    img.style.display = 'block';
   });
 
   const heroImage = document.querySelector('.hero__media img');
